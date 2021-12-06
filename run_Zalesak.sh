@@ -1,5 +1,5 @@
 rm -rf out
-mpif90 -c ZalesakIC.f90
-mpif90 -o out ZalesakIC.o
+gfortran-mp-11 -c ZalesakIC.f90
+gfortran-mp-11 -o out ZalesakIC.o
 ./out
 

@@ -1,6 +1,5 @@
 import numpy as np
 from math import *
-#from pycse import bvp
 import matplotlib.pyplot as plt
 from numpy import *
 
@@ -16,7 +15,9 @@ n = size(data[:,0])
 VOF = zeros([nx,ny])
 
 for i in arange(0,n,1):
-	VOF[data[i,0],data[i,1]] = data[i,2]
+	ii = int(data[i,0])
+	jj = int(data[i,1])
+	VOF[ii,jj] = data[i,2]
 
 
 Xc, Yc = np.meshgrid(xc, yc)
